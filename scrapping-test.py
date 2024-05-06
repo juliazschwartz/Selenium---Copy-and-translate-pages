@@ -1,3 +1,4 @@
+#to find all the urls from the main pages and sublinks of the company website
 import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -5,7 +6,6 @@ from selenium.webdriver.common.by import By
 browser = webdriver.Chrome()
 browser.get("https://www.classcentral.com")
 time.sleep(1)
-
 
 
 
