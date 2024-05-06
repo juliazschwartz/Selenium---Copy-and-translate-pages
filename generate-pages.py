@@ -1,3 +1,5 @@
+#appending the javascript link to the webpages
+
 # import modules
 import time
 from selenium import webdriver
@@ -14,21 +16,7 @@ options.add_argument('--lang=hi')  # set your language
 
 browser = webdriver.Chrome(options=options)
 browser.set_window_size(1600, 800)
-# browser.get("https://www.classcentral.com")
 
-# # finding the SUBLINKS
-# indexed_url = [] 
-# links = browser.find_elements(By.TAG_NAME,'a') #finding all the sub_links
-
-# for link in links:
-                    
-#                         url = link.get_attribute("href")
-#                         if url.find("'") != -1:
-#                                 continue
-#                         url = url.split('#')[0] 
-#                         if url[0:4] == 'http':
-#                                 if (url not in indexed_url):
-#                                     indexed_url.append(url)
 indexed_url= [
 'https://www.classcentral.com/login',
 
@@ -37,47 +25,21 @@ indexed_url= [
 for url in indexed_url:     
    
     name =  url.split("/")[3]
-        # if(len(url.split("/")) > 4) :
-        #     if(url.split("/")[4] == "business"):
-        #                 continue
-        
-        #     if(url.split("/")[4] == "education"):
-        #                 continue
-        #     if(url.split("/")[4] == "health"):
-        #                 continue
-        #     if(url.split("/")[3] == "index"):
-        #                 continue
-        #     if(url.split("/")[4] == "infosec"):
-        #                 continue
-        #     if(url.split("/")[4] == "personal-development"):
-        #                 continue
-        #     if(url.split("/")[4] == "science"):
-        #                 continue
-        #     name =  url.split("/")[4]
-        # else :
-        #     name =  url.split("/")[3]
-            
-    # if(name == "") :
-    #         name = ""
+  
+
     print(name)
     browser.get(url)
     time.sleep(3)
-    # sanduiche = browser.find_element(By.CLASS_NAME,"site-header__external-menu-button") # SO PROS REPORTS
-    # rankings = browser.find_element(By.CSS_SELECTOR, " button[aria-controls='nested-menu-items-67849']")
-    # year = browser.find_element(By.CSS_SELECTOR, " button[aria-controls='nested-menu-items-67766']")
-    # providers = browser.find_element(By.CSS_SELECTOR, " button[aria-controls='nested-menu-items-67772']")
+   
     header = browser.find_element(By.TAG_NAME, "nav")
-    # button = header.find_element(By.CSS_SELECTOR, "button[data-name='LARGE_UP_MAIN_NAV_TRIGGER']")
+ 
     input = browser.find_element(By.CSS_SELECTOR, "input[data-name='AUTOCOMPLETE_SEARCHBOX']")
-    # follow = browser.find_element(By.CSS_SELECTOR, "button[data-name='FOLLOW']") # SO PROS SUBJECTS
-    # image = browser.find_element(By.ID, "learning-illus")
-    # div = header.find_element(By.CLASS_NAME, "symbol-report")
+
     elem = browser.find_element(By.TAG_NAME, "body")
 
 
 
     actionChains = ActionChains(browser)
-    # actionChains.move_to_element(header).perform()
     actionChains.context_click(on_element=header).perform()
 
 
@@ -89,16 +51,7 @@ for url in indexed_url:
 
 
     time.sleep(2) 
-    # actionChains.move_to_element(follow).perform()
-    # time.sleep(1) 
-    # actionChains.move_to_element(sanduiche).perform()
-    # time.sleep(2) 
-    # actionChains.move_to_element(rankings).perform()
-    # time.sleep(2) 
-    # actionChains.move_to_element(year).perform()/
-    # time.sleep(2) 
-    # actionChains.move_to_element(providers).perform()
-    # actionChains.move_to_element(button).perform()
+
 
     pyautogui.moveTo(300, 190) 
     for i in range(20):
