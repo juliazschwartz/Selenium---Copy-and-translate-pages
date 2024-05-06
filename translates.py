@@ -1,3 +1,4 @@
+#Run this script to translate the generated pages
 import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
