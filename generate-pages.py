@@ -1,4 +1,4 @@
-
+#Run this script to generate the pages from the URLs pre scrapped
 # import modules
 import time
 from selenium import webdriver
