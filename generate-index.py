@@ -1,3 +1,4 @@
+# Appending javascript in the pre generated webpages
 # import modules
 import time
 from bs4 import BeautifulSoup
