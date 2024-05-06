@@ -1,3 +1,4 @@
+#here it will change some link references
 import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -30,23 +31,3 @@ for e in elem :
                       print(url)
         
 
-    
-#         if (len(url.split("/")) > 2):
-         
-#          if(url.split("/")[2] == "www.classcentral.com") :
-#             if(len(url.split("/")) > 4) :
-#                 name =  url.split("/")[4]
-#             else :
-#                 name =  url.split("/")[3]
-    
-#             if(name == "") :
-#                  name = "index"
-#             url = "/"+ name
-#             my_dictionary[url] = "/" + name + ".html"   
-# print(my_dictionary)
-            
-# with open('coursera-teste.html',  encoding="cp437") as infile, open('chemical-engineering.html', 'w',  encoding="cp437") as outfile:
-#     for line in infile:
-#         for src, target in my_dictionary.items():
-#                  line = line.replace(src, target)
-#         outfile.write(line)
