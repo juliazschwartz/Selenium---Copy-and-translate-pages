@@ -22,8 +22,6 @@ browser.get("http://classcentral.com/help")
 header = browser.find_element(By.TAG_NAME, "header")
 button = header.find_element(By.CSS_SELECTOR, "button[data-name='LARGE_UP_MAIN_NAV_TRIGGER']")
 input = browser.find_element(By.CSS_SELECTOR, "input[data-name='AUTOCOMPLETE_SEARCHBOX']")
-    # follow = browser.find_element(By.CSS_SELECTOR, "button[data-name='FOLLOW']") # SO PROS SUBJECTS
-    # image = browser.find_element(By.ID, "learning-illus")
 div = header.find_element(By.CLASS_NAME, "symbol-report")
 elem = browser.find_element(By.TAG_NAME, "body")
 
@@ -43,14 +41,6 @@ for i in range(3):
 
 pyautogui.press('enter')
 
-# time.sleep(4) 
-# actionChains.move_to_element(sanduiche).perform()
-# time.sleep(2) 
-# actionChains.move_to_element(rankings).perform()
-# time.sleep(2) 
-# actionChains.move_to_element(year).perform()
-# time.sleep(2) 
-# actionChains.move_to_element(providers).perform()
 time.sleep(2) 
 pyautogui.moveTo(300, 210) 
 for i in range(20):
@@ -80,70 +70,6 @@ file.write("<!DOCTYPE html>")
 file.write(html)
 file.close()
 
-
-# browser.close()
-# # translates to hindi
-# translator = Translator(service_urls=['translate.googleapis.com'])
-# replacements = {} #dictionary for the translation
-# tags = ["h1", "h2", "h3", "h4", "h5", "h6", "h7", "h8", "p", "span", "li", "label", "small", "a", "i", "strong", "title", "button", "font", "div"] #tags that contains text to be translated
-# for tag in tags :
-#     elem = browser.find_elements(By.TAG_NAME, tag)
-#     for e in elem :
-#         if (e.text != ""):
-#             chave = e.text
-#             traducao = translator.translate(e.text, dest="hi").text
-#             replacements[chave] = traducao
-            
-
-
-# # creates a new translated file in hindi
-# with open('coursera-teste.html') as infile, open('coursera-teste-hindi.html', 'w', encoding="utf-8")  as outfile:
-#         for line in infile:
-#             for k,value  in replacements.items():
-#                 line = line.replace(k, replacements[k])
-#             outfile.write(line)
-
-
-        
-
-# with open('index-original-language.html') as infile:
-#     for line in infile:
-# #          print(line)
-# f = open('index-original-language.html');
-# html = f.read()
-# parsed_html = BeautifulSoup(html, features="html.parser");
-# paragrafo = parsed_html.body.findAll('span')
-# for p in paragrafo:
-#     if  (p == "bookmarks"):
-#             p = 'इस प्रकार'
-        
-
-# #replace the href attribute from <a> tags
-
-# my_dictionary = {}
-# tag = "a"
-# elem = browser.find_elements(By.TAG_NAME, tag)
-# for e in elem :
-#         url = e.get_attribute("href") 
-#         if (len(url.split("/")) > 2):
-         
-#          if(url.split("/")[2] == "www.classcentral.com") :
-#             if(len(url.split("/")) > 4) :
-#                 name =  url.split("/")[4]
-#             else :
-#                 name =  url.split("/")[3]
-#             if(name == "") :
-#                  name = "index"
-#             url = "/"+ name
-#             my_dictionary[url] = "/" + name + ".html"   
-# print(my_dictionary)
-# browser.close()
-# with open('coursera-teste.html') as infile, open('coursera-teste2.html', 'w', encoding="utf-8") as outfile:
-#     for line in infile:
-#         for src, target in my_dictionary.items():
-#                  line = line.replace(src, target)
-#         outfile.write(line)
-        
 # #append the javascript       
 
 javascript = ['<script src = "https://www.classcentral.com/webpack/7540.b7f3ab16c1d7d344980b.js"></script>',
