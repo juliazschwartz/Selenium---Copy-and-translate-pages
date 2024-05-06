@@ -1,4 +1,4 @@
-#This script is the first step. Its to find all the urls from the main pages and sublinks of the company website
+#This script is the first step. Run it to find all the urls from the main pages and sublinks of the company website
 import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
