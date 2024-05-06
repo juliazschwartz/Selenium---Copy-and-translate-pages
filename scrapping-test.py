@@ -7,22 +7,6 @@ browser.get("https://www.classcentral.com")
 time.sleep(1)
 
 
-# elem = browser.find_element(By.TAG_NAME, "body")
-
-# no_of_pagedowns = 20
-
-# while no_of_pagedowns:
-#     elem.send_keys(Keys.PAGE_DOWN)
-#     time.sleep(0.2)
-#     no_of_pagedowns-=1
-    
-    
-# html = browser.page_source
-# time.sleep(2)
-# file = open("archive.html", "w")
-# file.write(html)
-# file.close()
-
 
 
 
