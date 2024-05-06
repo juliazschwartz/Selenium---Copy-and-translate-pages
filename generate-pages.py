@@ -1,4 +1,3 @@
-#appending the javascript link to the webpages
 
 # import modules
 import time
